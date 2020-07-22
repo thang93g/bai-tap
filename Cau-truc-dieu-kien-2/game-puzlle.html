@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Puzzle</title>
+</head>
+<style>
+    img{
+        width: 200px;
+        height: auto;
+    }
+</style>
+<body>
+<img onclick="clickImage(1)" id="img1" alt="1" src="images/anh1.jpg">
+<img onclick="clickImage(2)" id="img2" alt="1" src="images/anh1.jpg">
+<img onclick="clickImage(3)" id="img3" alt="1" src="images/anh1.jpg">
+<img onclick="clickImage(4)" id="img4" alt="1" src="images/anh1.jpg">
+</body>
+<script>
+
+    function clickImage(number) {
+        let img = document.getElementById('img'+number);
+        let index = +img.alt;
+
+        if(index < 4){
+            index++;
+        }else {
+            index = 1;
+        }
+
+        img.alt = index;
+        img.src = "images/anh"+index+".jpg";
+        checkWin();
+    }
+
+    function checkWin() {
+        let img1 = document.getElementById('img1');
+        let img2 = document.getElementById('img2');
+        let img3 = document.getElementById('img3');
+        let img4 = document.getElementById('img4');
+
+        if(img1.alt == img2.alt && img2.alt == img3.alt && img3.alt == img4.alt){
+            setTimeout(function () {
+                alert("You win");
+            },100);
+
+        }
+    }
+
+</script>
+</html>

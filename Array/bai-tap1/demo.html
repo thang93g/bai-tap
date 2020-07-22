@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var a = [33, 4, 1111, 222];
+    a.sort(); // Alphabetical order: 1111, 222, 33, 4
+    a.sort(function(a,b) { // Numerical order: 4, 33, 222, 1111
+        return a-b; // Returns &lt; 0, 0, or &gt; 0, depending on order
+    });
+    a.sort(function(a,b) { // Reverse numerical order
+        return b-a;
+    });
+</script>
+</html>

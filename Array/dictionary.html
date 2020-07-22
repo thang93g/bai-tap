@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Dictionary</h1>
+<hr>
+<input type="text" id = 'word'>
+<input type="button" onclick="trans()" value="Translate"><br>
+<p id="outp"></p>
+</body>
+<script>
+    function trans() {
+        let eng = ['people','history','way','art','world','information','map','two','family','government'];
+        let vie = ['Người','Lịch sử','Đường đi','Nghệ thuật','Thế giới','Thông tin','Bản đồ','Hai','Gia đình','Chính phủ'];
+        let inp = document.getElementById('word').value;
+        let index = eng.indexOf(inp);
+        if (index !== -1) {
+            document.getElementById('outp').innerHTML = vie[index];
+        } else {
+            document.getElementById('outp').innerHTML = "không tìm thấy";
+        }
+    }
+</script>
+</html>

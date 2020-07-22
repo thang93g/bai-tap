@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>may tinh nang cao</title>
+</head>
+<style>
+    button{
+        width: 50px;
+        height: 50px;
+    }
+    input{
+        width: 208px;
+        height: 50px;
+    }
+</style>
+<body>
+<input id="inputNumber"><br><br>
+<button onclick="clickN(1)">1</button>
+<button onclick="clickN(2)">2</button>
+<button onclick="clickN(3)">3</button>
+<button onclick="clickN(4)">4</button><br>
+<button onclick="clickN(5)">5</button>
+<button onclick="clickN(6)">6</button>
+<button onclick="clickN(7)">7</button>
+<button onclick="clickN(8)">8</button><br>
+<button onclick="clickN(9)">9</button>
+<button onclick="clickN(0)">0</button>
+<button onclick="calculator()">=</button>
+<button>C</button><br>
+<button onclick="clickN('-')">-</button>
+<button onclick="clickN('*')">*</button>
+<button onclick="clickN('/')">/</button>
+<button onclick="clickN('+')">+</button>
+</body>
+<script>
+    function clickN(value) {
+        document.getElementById('inputNumber').value += value;
+    }
+    function calculator() {
+        let ctnc = document.getElementById('inputNumber').value;
+        let result = eval(ctnc);
+        document.getElementById('inputNumber').value = result;
+    }
+</script>
+</html>

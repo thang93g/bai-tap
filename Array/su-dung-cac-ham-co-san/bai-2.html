@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    const a = prompt("nhap so bat ky");
+    const b = a.toString();
+    const arr = [b[0]];
+    for (let i = 1; i < b.length ; i++) {
+        if ((b[i-1] % 2 === 0) && (b[i] % 2 === 0)) {
+            arr.push('-',b[i]);
+        } else {
+            arr.push(b[i]);
+        }
+    }
+    console.log(arr.join(''));
+</script>
+</html>
