@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<p id="F"></p>
+<p id="K"></p>
+</body>
+<script>
+    let Temperature = function (doC) {
+        this.doC = doC;
+        this.getDoC = function () {
+            return doC;
+        }
+        this.setDoC = function (doC) {
+            this.doC = doC;
+        }
+    }
+    function doF() {
+        let doC = teamperature.doC;
+        return doC*1.8 + 32;
+    }
+    function doK() {
+        let doC = teamperature.doC;
+        return doC + 273;
+    }
+    let teamperature = new Temperature(25);
+    document.getElementById("F").innerHTML = "Do F: " + doF();
+    document.getElementById("K").innerHTML = "Do K: " + doK();
+</script>
+</html>

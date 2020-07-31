@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh giai thua</title>
+</head>
+<body>
+
+</body>
+<script>
+var a = +prompt("nhap so can tinh giai thua");
+function giaiThua(number) {
+    let result = 1;
+    if (number == 0) {
+        result = 1;
+    } else {
+        for (let i = 1; i <= number; i++) {
+            result = result * i;
+        }
+    }
+    return result;
+}
+let ketqua = giaiThua(a);
+console.log(ketqua);
+</script>
+</html>

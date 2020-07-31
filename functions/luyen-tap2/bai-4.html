@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem tra ki tu so</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = prompt("nhap ki tu can kiem tra")
+    function test() {
+        let array = ["1","2","3","4","5","6","7","8","9","0"];
+        let index = array.indexOf(a);
+        if (index === -1){
+            return false;
+        } else {
+            return true;
+        }
+    }
+    let result = test();
+    console.log(result);
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>so nguyen nho nhat</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = +prompt("nhap so thu 1");
+    let b = +prompt("nhap so thu 2");
+    let c = +prompt("nhap so thu 3");
+    function check() {
+        let min = a;
+        if (a < b){
+            if (a < c){
+                min = a;
+            } else {
+                min = c;
+            }
+        } else if(b < c){
+            min = b;
+        } else {
+            min = c;
+        }
+        return min;
+    }
+    let result = check();
+    console.log(result);
+</script>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //tinh tong cac phan tu chan trong mang
+    let array = [];
+    let sum = 0;
+    let array2 = [];
+    for (let i = 0; i < 50 ; i++) {
+        array.push(Math.floor(Math.random()*100));
+    }
+    for (let i = 0; i < array.length ; i++) {
+        if (array[i] % 2 === 0){
+            sum += array[i];
+        } else {
+            array2.push(i);
+        }
+    }
+    console.log(sum);
+    console.log(array2);
+
+
+    //100 so tu nhien chia het cho 7 nhung ko chia het cho 3
+    // let count = 0;
+    // let number = 1;
+    // while (count < 100){
+    //     if (number % 7 === 0 && number % 3 !== 0){
+    //         console.log(number);
+    //         count++;
+    //     }
+    //     number++;
+    // }
+
+
+    // 100 nam nhuan dau tien từ năm 2020
+    // function checkNamNhuan(year) {
+    //     if (year % 4 === 0){
+    //         if (year % 100 === 0){
+    //             if (year % 400 === 0){
+    //                 return true;
+    //             } else {
+    //                 return false;
+    //             }
+    //         }
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+    // }
+    // let count = 0;
+    // let i = 2020;
+    // while (count < 100){
+    //     if (checkNamNhuan(i)){
+    //         console.log(i);
+    //         count++;
+    //     }
+    //     i++;
+    // }
+
+    //tim phan tu giong nhau cua 2 mang
+    // let arr1 = [];
+    // for (let i = 0; i < 20 ; i++) {
+    //     arr1.push(Math.floor(Math.random()*100));
+    // }
+    //
+    // let arr2 = [];
+    // for (let i = 0; i < 20 ; i++) {
+    //     arr2.push(Math.floor(Math.random()*100));
+    // }
+    //
+    // let array = [];
+    // for (let i = 0; i < arr1.length ; i++) {
+    //     for (let j = 0; j < arr2.length ; j++) {
+    //         if (arr1[i] == arr2[j]){
+    //             array.push(arr1[i])
+    //         }
+    //     }
+    // }
+    // console.log(array);
+</script>
+</html>

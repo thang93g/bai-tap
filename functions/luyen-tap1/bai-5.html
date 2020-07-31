@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="zodiac">
+<input type="button" onclick="findZodiac()" value="Click">
+</body>
+<script>
+    let zod1 = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+    let zod2 = ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+    function findZodiac() {
+        let zod = document.getElementById("zodiac").value;
+        let index = zod1.indexOf(zod);
+        if (index == -1){
+            alert("khong cos chom sao tuong ung");
+        } else {
+            alert(zod2[index]);
+        }
+    }
+</script>
+</html>

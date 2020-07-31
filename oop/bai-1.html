@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hinh chu nhat</title>
+</head>
+<body>
+<p id="acreage"></p>
+<p id="perimeter"></p>
+<canvas id="myCanvas" width="800" height="300" style="border: 1px solid black"></canvas>
+</body>
+<script>
+    let Rectangle = function (length,width) {
+        this.length = length;
+        this.width = width;
+        this.getLength = function () {
+            return length;
+        }
+        this.getWidth = function () {
+            return width;
+        }
+        this.setLength = function (length) {
+            this.length = length;
+        }
+        this.setWidth = function (width) {
+            this.width = width;
+        }
+    }
+    var  retangle = new Rectangle(100,50);
+    retangle.setLength(200);
+    retangle.setWidth(100);
+
+    function createRetangle() {
+        let length = retangle.length;
+        let width = retangle.width;
+        var ctx = document.getElementById("myCanvas").getContext("2d");
+        ctx.beginPath();
+        ctx.rect(20,20,length,width);
+        ctx.stroke();
+    }
+    createRetangle();
+    let length = retangle.length;
+    let width = retangle.width;
+    document.getElementById("acreage").innerHTML = "Dien tich: " + (length*width);
+    document.getElementById("perimeter").innerHTML = "Chu vi: " + (length+width)*2;
+</script>
+</html>

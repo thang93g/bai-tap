@@ -8,15 +8,23 @@
 
 </body>
 <script>
-    function isPrime() {
-        for (let number = 2; number <= 1000 ; number++) {
-            for (let i = 1; i < number ; i++) {
-                if ( number % i != 0){
-                    console.log(number);
-                }
+    function isPrime(num) {
+        if (num <2){
+            return false;
+        }
+        for (let i = 2; i <= Math.sqrt(num) ; i++) {
+            if (num % i === 0){
+                return false;
             }
         }
+        return true;
     }
-    isPrime()
+    let result = isPrime(27);
+    console.log(result);
+    for (let i = 2; i < 1000 ; i++) {
+        if (isPrime(i) == true){
+            console.log(i);
+        }
+    }
 </script>
 </html>
